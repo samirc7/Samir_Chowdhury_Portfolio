@@ -204,6 +204,7 @@
             align-items: center;
             justify-content: center;
             font-size: 1.5em;
+            flex-shrink: 0;
         }
 
         .project-title {
@@ -428,7 +429,8 @@
             font-weight: 500;
         }
 
-        .github-link {
+        .github-link,
+        .pdf-link {
             display: inline-flex;
             align-items: center;
             gap: 12px;
@@ -443,7 +445,8 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .github-link:hover {
+        .github-link:hover,
+        .pdf-link:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
         }
@@ -455,6 +458,18 @@
             border-radius: 15px;
             color: #555;
             line-height: 1.8;
+        }
+
+        .capstone-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 600;
+            margin-left: 10px;
+            vertical-align: middle;
         }
 
         @media (max-width: 768px) {
@@ -534,7 +549,7 @@
         <header class="header">
             <div class="profile-img"></div>
             <h1>Samir Chowdhury</h1>
-            <p class="title">QA/Automation Engineer | Business Analyst | SDLC | Product Management | Product Development
+            <p class="title">QA/Automation Engineer | DevOps | SDLC | Product Management/Development | Data Engineering
             </p>
             <div class="contact-info">
                 <a href="tel:864-279-3026" class="contact-item">
@@ -578,10 +593,11 @@
                 style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 25px; border-radius: 15px; margin-bottom: 30px;">
                 <h3 style="color: #333; margin-bottom: 15px; text-align: center;">
                     <i class="fas fa-lightbulb" style="color: #667eea;"></i>
-                    
+
                 </h3>
                 <p style="color: #666; text-align: center; line-height: 1.6;">
-                    Currently seeking QA/SDET and Analyst roles where I can apply my expertise in QA and SDLC to deliver high performing results.
+                    Currently seeking QA, SDET, DevOps, Data, and IT roles where I can apply my expertise in QA and SDLC
+                    to deliver lasting results.
                 </p>
             </div>
 
@@ -627,7 +643,7 @@
                 <h3 style="color: #667eea; font-size: 1.8em; margin-bottom: 25px; text-align: center;">
                     <i class="fas fa-star"></i> Core Competencies
                 </h3>
-               
+            </div>
 
             <div class="skills-grid">
                 <div class="skill-category">
@@ -650,6 +666,8 @@
                         <span class="skill-tag">HTML/CSS</span>
                         <span class="skill-tag">Bash/Shell</span>
                         <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">MySQL</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -704,7 +722,7 @@
                 </div>
 
                 <ul class="achievements">
-                    <li>Achieved 100% validation of user journeys on production systems for a regional 
+                    <li>Achieved 100% validation of user journeys on production systems for a regional
                         banking customer</li>
                     <li>Improved response accuracy by 25% by testing AI-driven NLU/TTS systems, validating AMQP
                         integration, and streamlining model training</li>
@@ -727,8 +745,8 @@
             </div>
         </section>
 
-        <!-- IMPROVED PROJECTS SECTION -->
-        <section id="projects" class="section"> 
+        <!-- PROJECTS SECTION WITH CAPSTONE -->
+        <section id="projects" class="section">
             <h2><i class="fas fa-project-diagram"></i> Key Projects & Technical Contributions</h2>
 
             <div
@@ -738,25 +756,146 @@
                     High-Performing QA and Agile Process Improvement
                 </h3>
                 <p style="color: #666; font-size: 1.1em; line-height: 1.6;">
-                    Proven Experience in testing complex IVR technologies and customer collaboration in banking and utility sectors.
-                    Validated and tested such as authentication systems, AI integration, API validation, and multi-state deployment testing
+                    Experience in testing complex IVR technologies and customer collaboration in banking and utility
+                    sectors.
+                    Validated and tested such as authentication systems, AI integration, API validation, and multi-state
+                    deployment testing
                     with measurable quality improvements.
                 </p>
-                <div>  </div>
-                <div style="display:flex; justify-content:center; gap:10px; margin-top:10px;"class="skill-tags">
-                        <span class="skill-tag">Functional Testing</span>
-                        <span class="skill-tag">End-to-End</span>
-                        <span class="skill-tag">Acceptance testing</span>
-                        <span class="skill-tag">Sanity Testing</span>
-                        <span class="skill-tag">White Box/Black Box</span>
-                        <span class="skill-tag">Manual</span>
-                        <span class="skill-tag">Automation</span>
+                <div style="display:flex; justify-content:center; gap:10px; margin-top:15px; flex-wrap: wrap;"
+                    class="skill-tags">
+                    <span class="skill-tag">Functional Testing</span>
+                    <span class="skill-tag">End-to-End</span>
+                    <span class="skill-tag">Acceptance Testing</span>
+                    <span class="skill-tag">Sanity Testing</span>
+                    <span class="skill-tag">White Box/Black Box</span>
+                    <span class="skill-tag">Manual</span>
+                    <span class="skill-tag">Automation</span>
+                </div>
+            </div>
 
+            <!-- ACADEMIC CAPSTONE PROJECT - FEATURED -->
+            <div style="margin-bottom: 60px;">
+                <h3 style="color: #667eea; font-size: 2em; margin-bottom: 30px; text-align: center;">
+                    <i class="fas fa-graduation-cap"></i> Academic Capstone Project
+                </h3>
 
+                <div class="project-card" id="capstone-iit-db"
+                    style="max-width: 100%; background: linear-gradient(135deg, #fff5f5 0%, #ffe0e0 100%);">
+                    <div class="project-header">
+                        <div class="project-icon" style="background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div style="flex: 1;">
+                            <h3 class="project-title">
+                                IIT Student Assessment & Evaluation Database Application
+                                <span class="capstone-badge">SENIOR CAPSTONE PROJECT</span>
+                            </h3>
+                            <div class="project-subtitle">University of South Carolina | Spring 2023 | 8-week compressed
+                                timeline</div>
+                        </div>
+                    </div>
+
+                    <div
+                        style="background: rgba(255,255,255,0.9); border-left: 4px solid #f5576c; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <p style="color: #d63031; font-weight: 600; margin-bottom: 8px;">
+                            <i class="fas fa-exclamation-triangle"></i> Extraordinary Circumstances: Mid-Project Pivot
+                        </p>
+                        <p style="color: #666; font-size: 0.95em; line-height: 1.6;">
+                            Original Shaw Air Force Base project cancelled due to DoD compliance requirements. Team
+                            restarted from scratch at Sprint 1
+                            while peer teams were finishing Sprint 2—creating a 2-week deficit. Delivered complete,
+                            functional database system on original deadline
+                            despite compressed timeline.
+                        </p>
+                    </div>
+
+                    <p class="project-description">
+                        Served as Backend Developer, Integration Lead, and De Facto Scrum Master for a full-stack web
+                        application consolidating fragmented
+                        faculty assessment data across 20+ faculty members. Designed MySQL database architecture, built
+                        PHP integration layer, and led
+                        accelerated Agile sprints to overcome 20% timeline deficit from mid-project restart.
+                    </p>
+
+                    <div class="metrics-grid">
+                        <div class="metric-item">
+                            <span class="metric-value">8</span>
+                            <span class="metric-label">Week Timeline</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">20+</span>
+                            <span class="metric-label">Faculty Users</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">8</span>
+                            <span class="metric-label">Database Tables</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">100%</span>
+                            <span class="metric-label">Requirements Met</span>
+                        </div>
+                    </div>
+
+                    <div class="project-highlights">
+                        <h4><i class="fas fa-cogs"></i> Technical Implementation & Leadership</h4>
+                        <ul class="highlight-list">
+                            <li>Designed normalized MySQL relational database with 8 core tables and optimized queries
+                            </li>
+                            <li>Developed PHP integration layer with secure authentication and dynamic SQL query
+                                generation</li>
+                            <li>Built responsive HTML/CSS interface with visual analytics dashboards for trend analysis
+                            </li>
+                            <li>Led all weekly status reports and sprint coordination as de facto Scrum Master
+                                throughout project</li>
+                            <li>Deployed on 000webhost cloud platform with complete backup procedures</li>
+                            <li>System adopted as foundation for future capstone cohorts—architecture remains in
+                                production use</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-highlights" style="background: rgba(245, 87, 108, 0.1);">
+                        <h4><i class="fas fa-trophy"></i> Key Achievement: Project Recovery Under Pressure</h4>
+                        <ul class="highlight-list">
+                            <li>Pivoted from cancelled DoD mobile app to web database system within 5 days</li>
+                            <li>Conducted rapid requirements gathering and stakeholder interviews with new client</li>
+                            <li>Reorganized 4-sprint timeline to compress 10 weeks of work into 8-week window</li>
+                            <li>Increased team commitment to 10-15 hrs/week (vs. standard 5-7) to close timeline gap
+                            </li>
+                            <li>Delivered production-quality system that continues serving IIT department today</li>
+                        </ul>
+                    </div>
+
+                    <div style="display: flex; justify-content: center; gap: 15px; margin-top: 25px; flex-wrap: wrap;">
+                        <a href="Assets/Senior_Capstone_Project Portfolio_ IIT_Assessment_&_Evaluation_Samir_Chowdhury.pdf"
+                            download class="pdf-link">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download To View Full Project Portfolio PDF</span>
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">Database Design</span>
+                        <span class="tech-tag">Full-Stack Dev</span>
+                        <span class="tech-tag">Scrum Master</span>
+                        <span class="tech-tag">Agile</span>
+                        <span class="tech-tag">Project Recovery</span>
+                        <span class="tech-tag">Adaptability</span>
+                        <span class="tech-tag">Stakeholder Communication</span>
 
 
                     </div>
+                </div>
             </div>
+
+            <!-- PROFESSIONAL PROJECTS -->
+            <h3 style="color: #667eea; font-size: 2em; margin-bottom: 30px; margin-top: 60px; text-align: center;">
+                <i class="fas fa-briefcase"></i> Professional Projects
+            </h3>
 
             <div class="project-grid">
                 <!-- Project 1: Authentication Systems Testing -->
@@ -766,7 +905,7 @@
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <div>
-                            <h3 class="project-title">Authentication Systems Testing</h3>
+                            <h3 class="project-title">ICX 4.2 Feature Testing</h3>
                             <div class="project-subtitle">SSO/MFA Integration Validation | 2 week sprint </div>
                         </div>
                     </div>
@@ -775,7 +914,8 @@
                         Designed and executed 45+ test cases for SAML 2.0 SSO integration and multi-factor
                         authentication workflows.
                         Validated session management, timeout scenarios, and enterprise identity provider compatibility
-                        across ICX 4.2 implementations and early stages of the next major version with a Full GUI rewrite.
+                        across ICX 4.2 implementations and early stages of the next major version with a Full GUI
+                        rewrite.
                     </p>
 
                     <div class="metrics-grid">
@@ -816,7 +956,6 @@
                         <span class="tech-tag">Test Case Design</span>
                         <span class="tech-tag">Security Testing</span>
                         <span class="tech-tag">Negative Test Scenarios</span>
-
                     </div>
                 </div>
 
@@ -855,9 +994,10 @@
                     </div>
 
                     <div class="project-highlights">
-                        <h4><i class="fas fa-tasks"></i> Technical Validation</h4> k 
+                        <h4><i class="fas fa-tasks"></i> Technical Validation</h4>
                         <ul class="highlight-list">
-                            <li>Tested speech recognition accuracy across multiple dialects and noise levels in English and Spanish</li>
+                            <li>Tested speech recognition accuracy across multiple dialects and noise levels in English
+                                and Spanish</li>
                             <li>Validated AMQP queue processing for model training data pipelines</li>
                             <li>Executed boundary testing with malformed audio inputs and timeouts</li>
                             <li>Coordinated with ML team to test model deployment and rollback procedures</li>
@@ -882,7 +1022,8 @@
                         </div>
                         <div>
                             <h3 class="project-title">Multi-State Banking Platform Testing</h3>
-                            <div class="project-subtitle">Beta Customer IVR Deployment Testing | 2-week implementation</div>
+                            <div class="project-subtitle">Beta Customer IVR Deployment Testing | 2-week implementation
+                            </div>
                         </div>
                     </div>
 
@@ -991,7 +1132,7 @@
                         </div>
                         <div>
                             <h3 class="project-title">Release Testing & Deployment Validation</h3>
-                            <div class="project-subtitle"> End-to-End Testing | 6 release cycles</div>
+                            <div class="project-subtitle">End-to-End Testing | 6 release cycles</div>
                         </div>
                     </div>
 
@@ -1021,9 +1162,11 @@
                         <h4><i class="fas fa-cogs"></i> Release Process Testing</h4>
                         <ul class="highlight-list">
                             <li>Executed smoke tests and critical path validation for each release candidate</li>
-                            <li>Monitored deployment health via Prometheus metrics and Grafana dashboards with simulating traffic</li>
+                            <li>Monitored deployment health via Prometheus metrics and Grafana dashboards with
+                                simulating traffic</li>
                             <li>Validated container orchestration and service discovery in deployment scenarios</li>
-                            <li>Participated in all agile ceremonies gaining stakeholder feedback and clarification of requirements</li>
+                            <li>Participated in all agile ceremonies gaining stakeholder feedback and clarification of
+                                requirements</li>
                             <li>Coordinated rollback testing procedures for deployment failover scenarios</li>
                         </ul>
                     </div>
@@ -1045,7 +1188,8 @@
                         </div>
                         <div>
                             <h3 class="project-title">Production Performance Validation</h3>
-                            <div class="project-subtitle">Outbound Campaign Manager Performance Testing | 1-week testing cycle</div>
+                            <div class="project-subtitle">Outbound Campaign Manager Performance Testing | 1-week testing
+                                cycle</div>
                         </div>
                     </div>
 
@@ -1097,8 +1241,8 @@
                             <i class="fas fa-plug"></i>
                         </div>
                         <div>
-                            <h3 class="project-title"> Customer Journey Testing with API profiles</h3>
-                            <div class="project-subtitle"> Beta Release Customer | 5-week testing cycle</div>
+                            <h3 class="project-title">Customer Journey Testing with API profiles</h3>
+                            <div class="project-subtitle">Beta Release Customer | 5-week testing cycle</div>
                         </div>
                     </div>
 
@@ -1179,7 +1323,8 @@
                     <div class="project-highlights">
                         <h4><i class="fas fa-chart-line"></i> Process Improvements</h4>
                         <ul class="highlight-list">
-                            <li>Identified traceability gaps alongside offshore team workflows and requirements tracking</li>
+                            <li>Identified traceability gaps alongside offshore team workflows and requirements tracking
+                            </li>
                             <li>Standardized test case documentation templates in Confluence</li>
                             <li>Created knowledge transfer procedures reducing onboarding time by 50%</li>
                             <li>Implemented requirement clarification protocols with Product Owners</li>
@@ -1272,61 +1417,76 @@
                         onmouseout="this.style.textDecoration='none'">
                         Personal Framework Project - Playwright_Automation_NovaExpense
                     </a>
-                    <div style="color: #666;">Automated Testing framework for Expense Reporting Software built on React/NextJS </div>
+                    <div style="color: #666;">Automated Testing framework for Expense Reporting Software built on
+                        React/NextJS</div>
                 </div>
                 <div
                     style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 20px; border-radius: 15px; flex: 1; min-width: 250px;">
-                    <div style="font-weight: 700; color: #333; margin-bottom: 5px;">Currently Learning CompTIA Security+</div>
-                    <div style="color: #666;">Currently Learning Security Fundamentals to assist with my intuition as I further develop the infrastructure of the automation framework for NovaExpense</div>
+                    <div style="font-weight: 700; color: #333; margin-bottom: 5px;">Currently Learning CompTIA Security+
+                    </div>
+                    <div style="color: #666;">Currently Learning Security Fundamentals to assist with my intuition as I
+                        further develop the infrastructure of the automation framework for NovaExpense</div>
                 </div>
             </div>
         </section>
     </div>
+ <script>
+function showSection(sectionId, clickedElement = null) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
 
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
+    const navButtons = document.querySelectorAll('.nav-btn');
+    navButtons.forEach(button => {
+        button.classList.remove('active');
+    });
 
-            const navButtons = document.querySelectorAll('.nav-btn');
-            navButtons.forEach(button => {
-                button.classList.remove('active');
-            });
+    document.getElementById(sectionId).classList.add('active');
 
-            document.getElementById(sectionId).classList.add('active');
-            event.target.classList.add('active');
-        }
+    // Only add 'active' class if this was triggered by a click
+    if (clickedElement) {
+        clickedElement.classList.add('active');
+    }
+}
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const skillTags = document.querySelectorAll('.skill-tag');
-            skillTags.forEach(tag => {
-                tag.addEventListener('mouseenter', function () {
-                    this.style.transform = 'translateY(-2px)';
-                    this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
-                });
-
-                tag.addEventListener('mouseleave', function () {
-                    this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = 'none';
-                });
-            });
-
-            const techTags = document.querySelectorAll('.tech-tag');
-            techTags.forEach(tag => {
-                tag.addEventListener('mouseenter', function () {
-                    this.style.transform = 'translateY(-2px)';
-                    this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
-                });
-
-                tag.addEventListener('mouseleave', function () {
-                    this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = 'none';
-                });
-            });
+document.addEventListener('DOMContentLoaded', function () {
+    const skillTags = document.querySelectorAll('.skill-tag');
+    skillTags.forEach(tag => {
+        tag.addEventListener('mouseenter', function () {
+            this.style.transform = 'translateY(-2px)';
+            this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
         });
-    </script>
+        tag.addEventListener('mouseleave', function () {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = 'none';
+        });
+    });
+
+    const techTags = document.querySelectorAll('.tech-tag');
+    techTags.forEach(tag => {
+        tag.addEventListener('mouseenter', function () {
+            this.style.transform = 'translateY(-2px)';
+            this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+        });
+        tag.addEventListener('mouseleave', function () {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = 'none';
+        });
+    });
+
+    // ===== Hash scroll fix =====
+    if (window.location.hash) {
+        const id = window.location.hash.replace('#', '');
+        // Show the Projects section without throwing errors
+        showSection('projects');
+        // Scroll to the element
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+});
+</script>
+
 </body>
 
 </html>
