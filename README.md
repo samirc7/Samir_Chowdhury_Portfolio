@@ -10,4 +10,4 @@ LinkedIn: https://www.linkedin.com/in/samir-chowdhury-15082b199
 Files
 
 index.html - Portfolio website
-Assets/Resume_Samir_Chowdhury_QA.pdf - Downloadable resume
+Assets/Resume_Samir_Chowdhury_Quality_Engineer.pdf - Downloadable resume
